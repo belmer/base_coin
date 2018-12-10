@@ -1,14 +1,19 @@
 .App {
-  text-align: center;
+  width: 50%;
+  margin:20px auto;
+}
+.App .stats24{
+  margin: 10px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.list-group-item span.label {
+  margin-right: 10px;
 }
-
+button.list-group-item {
+  text-decoration: none;
+}
 .App-header {
-  background-color: #282c34;
+  /*background-color: #282c34;*/
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -18,15 +23,18 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App .loader{
+  margin: 0 auto;
+  text-align: center;
+  padding: 1em;
+  display: block;
+  vertical-align: top;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*
+  Set the color of the icon
+*/
+svg path,
+svg rect{
+  fill: #FF6700;
 }
