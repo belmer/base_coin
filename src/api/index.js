@@ -1,13 +1,9 @@
-import gdax from 'gdax';
-
-const publicClient = new gdax.PublicClient();
-
 export async function getProducts() {
-  const products = await publicClient.getProducts();
-  return products;
+  const products = await fetch('https://api.pro.coinbase.com/products')
+  return products.json()
 }
 
 export async function getProduct24HrStat(id) {
-  const stats = await publicClient.getProduct24HrStats(id);
-  return stats;
+  const stats = await fetch(`https://api.pro.coinbase.com/products/${id}/stats`)
+  return stats.json()
 }
